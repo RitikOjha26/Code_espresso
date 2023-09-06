@@ -30,6 +30,7 @@ const Editor = ({socketRef , roomId}) => {
         //console.log('changes',changes);
         const {origin}=changes;
         const code = instance.getValue();
+        console.log(code);
         if(origin!=='setValue'){
           socketRef.current.emit(ACTIONS.CODE_CHANGE,{
             roomId,
@@ -37,17 +38,17 @@ const Editor = ({socketRef , roomId}) => {
 
           });
         }
-        //console.log(code);
+        console.log(code);
       
       });
 
-      // socketRef.current.on(ACTIONS.CODE_CHANGE,({code})=>{
-      //   // console.log('rec',code);
-      //    if(code !== null){
-      //      editorRef.current.setValue(code);
-      //    }
-      //  });
-       editorRef.current.setValue('hello');
+      socketRef.current.on(ACTIONS.CODE_CHANGE,({code})=>{
+        // console.log('rec',code);
+         if(code !== null){
+           editorRef.current.setValue(code);
+         }
+       });
+       
       
     }
     init();

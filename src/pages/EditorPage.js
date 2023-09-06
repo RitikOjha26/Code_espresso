@@ -27,6 +27,7 @@ const EditorPage = () => {
         toast.error('Socket Connection failed , try again later',e);
         reactNavigator('/');
        }
+
       socketRef.current.emit(ACTIONS.JOIN ,{
         roomId,
         username : location.state?.username,
@@ -92,7 +93,7 @@ if(!location.state)
         <button className='btn leaveBtn'>Leave</button>
       </div>
       <div className='editorWrap'>
-        <Editor socketRef={socketRef.current} roomId={roomId}/>
+        <Editor socketRef={socketRef} roomId={roomId}/>
       </div>
     </div>
   )
