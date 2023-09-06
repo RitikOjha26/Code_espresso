@@ -4,17 +4,19 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-image: url(./pages/background.png);
-  background-position: center;
+  /* background-image: url(./pages/background.png); */
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .formWrapper{
   background: #282a36;
+  opacity: 0.95;
   padding: 20px;
   border-radius: 10px;
   width: 400px;
   max-width: 90%;
+  position: absolute;
 
 }
 footer{
@@ -131,4 +133,9 @@ footer{
   padding-top: 20px;
   height: calc(100vh - 20px) !important;
 
+}
+video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

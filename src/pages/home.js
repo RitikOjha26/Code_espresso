@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {v4 as uuidV4} from 'uuid';
 import  toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import videobg from './videobg.mp4';
 const Home = () => {
   const navigate =useNavigate()
   const [roomId, setRoomId]=useState('');
@@ -35,6 +36,7 @@ const Home = () => {
   };
 
   return <div className='homePageWrapper'>
+    <video src={videobg} autoPlay loop muted></video>
     <div className='formWrapper'>
       <img className ="homePageLogo" src="/code-sync.png" alt="code-sync-logo" />
       <h4 className='mainLabel'> Paste Invitation Room Id</h4>
