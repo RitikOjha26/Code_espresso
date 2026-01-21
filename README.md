@@ -30,6 +30,10 @@
 * Github: [@RitikOjha26](https://github.com/RitikOjha26)
 * LinkedIn: [@Ritik-ojha](https://www.linkedin.com/in/ritik-ojha/)
 
+## Version 2.0
+
+For demo working of version 2.0 please refer [Deme](https://www.linkedin.com/posts/ritik-ojha_reactjs-socketio-googlegemini-activity-7328710190114004992-y-Jb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB72vSYBDyUC-c0Z-t0OpDEHAYTuEj1-zAs)
+
 ## ⭐️ Star
 
 Give a ⭐️ if this project helped you!
