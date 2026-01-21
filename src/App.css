@@ -1,51 +1,10 @@
-.homePageWrapper{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  /* background-image: url(./pages/background.png); */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+* {
+  font-family: 'Manrope', sans-serif;
 }
-.formWrapper{
-  background: #282a36;
-  opacity: 0.95;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  max-width: 90%;
-  position: absolute;
 
-}
 footer{
   position: fixed;
   bottom: 0;
-}
-.inputGroup {
-  display: flex;
-  flex-direction: column;
-
-}
-.mainLabel{
-  margin-bottom: 20px;
-  margin-top: 0;
-}
-.homePageLogo{
-  height: 80px;
-  margin-bottom: 30px;
-  margin-left: 34%;
-}
-.inputBox{
-  padding: 10px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  margin-bottom: 15px;
-  background: #eee;
-  font-size: 16px;
-  font-weight: bold;
 }
 .btn{
   border: none;
@@ -54,19 +13,17 @@ footer{
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  font-weight: bold;
+  font-weight: 400;
 }
-.joinBtn{
+.joinBtn {
   background: #4aed88;
   width: 100px;
   margin-left: auto;
 }
-.joinBtn:hover , .leaveBtn:hover{
+
+.joinBtn:hover,
+.leaveBtn:hover {
   background: #2b824c;
-}
-.createInfo{
-  margin: 0 auto ;
-  margin-top: 20px;
 }
 .createNewBtn{
  color: #4aed88;
@@ -105,7 +62,7 @@ footer{
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-weight: bold;
+  font-weight: 400;
   font-size: x-small;
   
 }
@@ -127,15 +84,20 @@ footer{
 }
 
 .CodeMirror{
-  
   font-size: 15px;
   line-height: 1.6;
   padding-top: 20px;
-  height: calc(100vh - 20px) !important;
+  flex: 1;
 
 }
 video{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.editorWrap{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

@@ -1,8 +1,8 @@
 import React, { useState,useRef, useEffect } from 'react'
-
 import  toast from 'react-hot-toast';
 import Client from '../compoents/Client';
 import Editor from '../compoents/Editor';
+import AIQuestionModal from '../compoents/AIQuestionModal';
 import { initSocket } from '../socket';
 import ACTIONS from '../Actions';
 import { useLocation , useNavigate ,Navigate,useParams} from 'react-router-dom';
@@ -16,6 +16,7 @@ const EditorPage = () => {
   //console.log(roomId);
   const reactNavigator = useNavigate();
   const [clients, setClients] = useState([]);
+  const [currentCode , setCurrentCode] = useState('');
 
   useEffect(()=>{
     const init = async ()=>{
@@ -85,10 +86,16 @@ const EditorPage = () => {
     toast.success('Left the Room');
   }
 
+  const handleCodeChange = (newCode) => {
+    setCurrentCode(newCode);
+    console.log('[Parent] Current code:', newCode);
+  };
+
 if(!location.state)
 {
  return <Navigate to='/'/>
 }
+
 
   return (
     <div className='mainWrap'>
@@ -113,6 +120,7 @@ if(!location.state)
         <button className='btn leaveBtn' onClick={leaveRoom}>Leave</button>
       </div>
       <div className='editorWrap'>
+      <AIQuestionModal getCode={() => codeRef.current}/>
         <Editor 
         socketRef={socketRef} 
         roomId={roomId} 
@@ -120,6 +128,8 @@ if(!location.state)
           codeRef.current=code;
         }}
         />
+        
+      
       </div>
     </div>
   )

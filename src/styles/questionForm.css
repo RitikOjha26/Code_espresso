@@ -1,0 +1,95 @@
+.question-modal {
+  background-color: #282a36;
+  color: #191b1f;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  gap: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container label {
+  font-weight: 400;
+  margin-bottom: 1px;
+  color: white;
+}
+
+.form-container input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.2s ease;
+}
+
+.form-container input:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* .form-submit button {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-submit button:hover {
+  background-color: #3f51b5;
+} */
+
+.form-submit button {
+  border: none;
+  width: 12em;
+  height: 3em;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #1C1A1C;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+}
+
+.sparkle {
+  fill: #AAAAAA;
+  transition: all 800ms ease;
+}
+
+.submit-text {
+  font-weight: 600;
+  color: #AAAAAA;
+  font-size: medium;
+}
+
+.form-submit button:hover {
+  background: linear-gradient(0deg,#A47CF3,#683FEA);
+  transform: translateY(-2px);
+}
+
+.form-submit button:hover .submit-text {
+  color: white;
+}
+
+.form-submit button:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+} 
+
+.loader {
+  display: flex;
+  justify-content: center;
+}

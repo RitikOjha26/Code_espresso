@@ -39,11 +39,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 
           });
         }
-
-
       });
-
-
     }
     init();
 
@@ -53,7 +49,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
     if (socketRef.current) {
       socketRef.current.on(ACTIONS.CODE_CHANGE, ({ code }) => {
         if (code !== null) {
-          editorRef.current.setValue(code);
+          editorRef.current.setValue(code); 
         }
       });
     }
@@ -68,7 +64,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
 
 
 
-  return <textarea id="realTimeEditor" ></textarea>
+  return <textarea id="realTimeEditor"></textarea>
 
 }
 
